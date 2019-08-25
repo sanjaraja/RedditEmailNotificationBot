@@ -18,6 +18,14 @@ reddit = praw.Reddit(client_id= client_id,
                      user_agent= user_agent,
                      username= username)
 
+subredditString = "+".join(subreddits).replace(" ", "")
+print(subredditString)
+
+
+
+def streamProcess(bot):
+    print("hello")
+
 if __name__ == "__main__":
     main()
 
