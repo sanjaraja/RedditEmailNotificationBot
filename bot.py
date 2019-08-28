@@ -7,7 +7,7 @@ def streamProcess(bot, key_words): #Need to pass in the instantiated bot and the
     for submission in bot.stream.submissions():
         for word in key_words:
             if word.lower() in submission.title.lower():
-                item = [submission.title, submission.score, submission.permalink]
+                item = [submission.title, submission.score, submission.shortlink]
                 return_dic[submission.title] = item
 
         if len(return_dic) == 10: return return_dic
